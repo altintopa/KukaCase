@@ -19,8 +19,11 @@ class PDPProductsCollectionViewCell: UICollectionViewCell {
         
     }
 
-    func setupCell(){
-        
+    func setupCell(item: ProductModel ){
+        lblPrice.text = "\(item.price) €"
+        lblProductName.text = item.description
+        //lblProductName.text = item.title
+        productImage.load(url: URL(string: item.image)!)
     }
     
 }

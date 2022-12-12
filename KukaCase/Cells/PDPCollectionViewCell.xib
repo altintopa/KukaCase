@@ -18,13 +18,13 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pH2-41-dhO">
-                        <rect key="frame" x="80" y="12" width="280" height="300"/>
+                        <rect key="frame" x="80" y="12" width="280" height="220"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="300" id="qQA-07-3vZ"/>
+                            <constraint firstAttribute="height" constant="220" id="qQA-07-3vZ"/>
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Co2-Ew-sR1">
-                        <rect key="frame" x="20" y="324" width="400" height="108.66666666666669"/>
+                        <rect key="frame" x="20" y="243.99999999999997" width="400" height="108.66666666666666"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Denemebiraskdmpwe dasdadadasdweoımşpwef wekmwenfpw" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Xw-Y1-Vzq">
                                 <rect key="frame" x="0.0" y="0.0" width="371.33333333333331" height="40.666666666666664"/>
@@ -87,14 +87,14 @@
                         </subviews>
                     </stackView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8T-ff-933">
-                        <rect key="frame" x="0.0" y="444.66666666666669" width="440" height="1"/>
+                        <rect key="frame" x="0.0" y="364.66666666666669" width="440" height="1"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="bTA-mf-S74"/>
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkx-0R-5lt">
-                        <rect key="frame" x="20" y="453.66666666666669" width="400" height="40"/>
+                        <rect key="frame" x="20" y="373.66666666666669" width="400" height="40"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="I6Z-ay-K65"/>
@@ -104,7 +104,7 @@
                         <buttonConfiguration key="configuration" style="plain" title="Add To Chart"/>
                     </button>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="oVc-rV-9p6">
-                        <rect key="frame" x="20" y="505.66666666666669" width="400" height="125.66666666666669"/>
+                        <rect key="frame" x="20" y="425.66666666666669" width="400" height="125.66666666666669"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeC-OV-krQ">
                                 <rect key="frame" x="0.0" y="0.0" width="91.666666666666671" height="20.333333333333332"/>

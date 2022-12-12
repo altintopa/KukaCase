@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProductListPageViewController: UIViewController {
+class PLPViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var lblCategoriTitle: UILabel!
@@ -16,12 +16,14 @@ class ProductListPageViewController: UIViewController {
     
     var headline: String = ""
     var products : [ProductModel] = []
+    var filterCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getProducts()
         
         setCollectionViewLayout()
+        
     }
     
     func reMakeHeadline(){
@@ -95,19 +97,30 @@ class ProductListPageViewController: UIViewController {
     
     @IBAction func filterButton_Tapped(_ sender: Any) {
         
+        if filterCount == 0 {
+            products = products.sorted{ $0.price > $1.price}
+            collectionView.reloadData()
+            filterCount = 1
+            
+        } else {
+            products = products.sorted{ $0.price < $1.price}
+            collectionView.reloadData()
+            filterCount = 0
+        }
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toPDP" {
-            let vc = segue.destination as! ProductDetailPageViewController
+            let vc = segue.destination as! ProductDetailPageVC
             vc.producID = sender as! Int
-            
+            vc.productName = (products[sender as! Int].title)
+            vc.allProducts = products
         }
     }
-    
 }
 
-extension ProductListPageViewController: UICollectionViewDelegate , UICollectionViewDataSource {
+extension PLPViewController: UICollectionViewDelegate , UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return products.count

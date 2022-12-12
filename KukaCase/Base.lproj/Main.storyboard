@@ -92,7 +92,7 @@
         <!--Electronics-->
         <scene sceneID="WXA-J5-6dm">
             <objects>
-                <viewController id="YlN-ja-dYe" customClass="ProductListPageViewController" customModule="KukaCase" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YlN-ja-dYe" customClass="PLPViewController" customModule="KukaCase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DeF-cd-ctv">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,8 +114,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="171" height="320"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="f6p-no-Xuj">
-                                                    <rect key="frame" x="25.666666666666671" y="7" width="120.00000000000001" height="158.66666666666666"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f6p-no-Xuj">
+                                                    <rect key="frame" x="25.666666666666671" y="6" width="120.00000000000001" height="160"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="QA7-EW-eoz"/>
                                                         <constraint firstAttribute="height" constant="160" id="SgG-Xa-0ei"/>
@@ -287,10 +287,10 @@
             </objects>
             <point key="canvasLocation" x="1945.8015267175572" y="3.5211267605633805"/>
         </scene>
-        <!--Product Detail Page View Controller-->
+        <!--Product Detail PageVC-->
         <scene sceneID="z9a-D5-csa">
             <objects>
-                <viewController id="w6L-ah-POl" customClass="ProductDetailPageViewController" customModule="KukaCase" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="w6L-ah-POl" customClass="ProductDetailPageVC" customModule="KukaCase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="unG-WJ-ybl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -298,8 +298,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PlX-Pc-LCi" userLabel="TopView">
                                 <rect key="frame" x="0.0" y="59" width="393" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Electronics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcS-uR-rdL">
-                                        <rect key="frame" x="154.33333333333334" y="5" width="84.333333333333343" height="20.333333333333332"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcS-uR-rdL">
+                                        <rect key="frame" x="90" y="5" width="213" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -313,15 +313,16 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="chevron-back"/>
                                         <connections>
-                                            <action selector="btnVack_Tapped:" destination="w6L-ah-POl" eventType="touchUpInside" id="hZq-wl-437"/>
+                                            <action selector="btnBack_Tapped:" destination="w6L-ah-POl" eventType="touchUpInside" id="yzK-uM-iGP"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="lcS-uR-rdL" firstAttribute="centerX" secondItem="PlX-Pc-LCi" secondAttribute="centerX" id="6FK-jl-mNu"/>
+                                    <constraint firstItem="lcS-uR-rdL" firstAttribute="centerY" secondItem="PlX-Pc-LCi" secondAttribute="centerY" id="ATP-a4-d8n"/>
                                     <constraint firstAttribute="height" constant="30" id="TUM-ws-X6J"/>
-                                    <constraint firstItem="lcS-uR-rdL" firstAttribute="centerY" secondItem="PlX-Pc-LCi" secondAttribute="centerY" id="W7A-xY-dWo"/>
+                                    <constraint firstItem="lcS-uR-rdL" firstAttribute="leading" secondItem="PlX-Pc-LCi" secondAttribute="leading" constant="90" id="Tlm-xx-bfa"/>
+                                    <constraint firstAttribute="trailing" secondItem="lcS-uR-rdL" secondAttribute="trailing" constant="90" id="Voe-g0-rbz"/>
                                     <constraint firstItem="EJk-uY-Nhd" firstAttribute="centerY" secondItem="PlX-Pc-LCi" secondAttribute="centerY" id="ag2-i2-p7A"/>
                                     <constraint firstItem="EJk-uY-Nhd" firstAttribute="leading" secondItem="PlX-Pc-LCi" secondAttribute="leading" constant="8" id="mXw-87-BuJ"/>
                                 </constraints>
@@ -329,26 +330,34 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iYi-jH-Bfq">
                                 <rect key="frame" x="0.0" y="89" width="393" height="729"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lig-WU-GcR">
-                                    <size key="itemSize" width="204" height="284"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lig-WU-GcR">
+                                    <size key="itemSize" width="100" height="207"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cfX-0L-dcd">
-                                        <rect key="frame" x="94.666666666666671" y="0.0" width="204" height="284"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="207"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="biP-ox-LMa">
-                                            <rect key="frame" x="0.0" y="0.0" width="204" height="284"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="207"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="204" height="284"/>
+                                        <size key="customSize" width="100" height="207"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="l4i-W0-ucW">
+                                        <rect key="frame" x="0.0" y="261" width="100" height="207"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7Wc-3f-Swa">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="207"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="w6L-ah-POl" id="TBJ-Pu-rJS"/>
-                                    <outlet property="delegate" destination="w6L-ah-POl" id="Lyn-Is-13r"/>
+                                    <outlet property="dataSource" destination="w6L-ah-POl" id="kmp-ft-Zjg"/>
+                                    <outlet property="delegate" destination="w6L-ah-POl" id="5mT-CZ-fL7"/>
                                 </connections>
                             </collectionView>
                         </subviews>
@@ -365,9 +374,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnBack" destination="ag2-i2-p7A" id="rwf-BL-kTa"/>
-                        <outlet property="collectionView" destination="iYi-jH-Bfq" id="Thr-xE-RBx"/>
-                        <outlet property="lblProduct" destination="lcS-uR-rdL" id="XwL-du-A0A"/>
+                        <outlet property="btnBack" destination="EJk-uY-Nhd" id="YYM-sk-PRP"/>
+                        <outlet property="collectionView" destination="iYi-jH-Bfq" id="41L-Y0-U46"/>
+                        <outlet property="lblProduct" destination="lcS-uR-rdL" id="OZ9-n4-2yR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aO1-70-2WC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -378,7 +387,6 @@
     <resources>
         <image name="chevron-back" width="12" height="19"/>
         <image name="chevron_right" width="7" height="12"/>
-        <image name="pencil.circle.fill" catalog="system" width="128" height="123"/>
         <image name="sort_icon" width="22" height="14"/>
         <image name="star_filled" width="15" height="14"/>
         <image name="start_empty" width="15" height="14"/>

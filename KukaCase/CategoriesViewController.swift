@@ -21,7 +21,7 @@ class CategoriesViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toPLP" {
-            let vc = segue.destination as! ProductListPageViewController
+            let vc = segue.destination as! PLPViewController
             vc.headline = categories[sender as! Int]
         }
     }
